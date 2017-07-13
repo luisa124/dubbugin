@@ -12,7 +12,7 @@ function Producto(compra, cantidad) {
 Producto.prototype.toHTML = function () {
   var html = '';
   html += this.compra.toUpperCase() + '<br>';
-  html += 'Cantidad' + this.Cantidad + '<br>';
+  html += 'Cantidad: ' + this.cantidad + '<br>';
   html += '<br><br>';
   return html;
 }
@@ -20,7 +20,7 @@ Producto.prototype.toHTML = function () {
 //Función que une todas las compras guardadas en el array productos
 function mergeHTML (){
   var html = '';
-  for (i=0; i<productos.length; i++){
+  for (var i=0; i<productos.length; i++){
     html += productos[i].toHTML();
   }
   return html;
